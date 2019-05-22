@@ -3,7 +3,7 @@
 
 This repository contains a few web scrapers I built primarily using Python's `requests` and `bs4` libraries.
 
-There are two scrapers:
+There are two webscrapers in this repo:
 1. `bookstore_webscraper.py`: This file contains functions that help scrape book information from [this](http://books.toscrape.com/catalogue/) website.
 2. `nasdaq_webscraper.py`: This file contains functions that help scrape stock data from [this](https://www.nasdaq.com/screening/companies-by-industry.aspx) NASDAQ webpage.
 
