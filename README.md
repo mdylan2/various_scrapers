@@ -9,17 +9,25 @@ There are two scrapers:
 
 ## Sample Usage for Each File:
 ### `bookstore_webscraper.py`
-To scrape data from pages 1 to 3, run the following command. The output of this function is a pandas dataframe
-> data = bookstore_scraper('http://books.toscrape.com/catalogue/',1,3)
+To scrape data from pages 1 to 3, run the following command.
+```python
+data = bookstore_scraper('http://books.toscrape.com/catalogue/',1,3)
+```
+The output of the above function is a pandas dataframe.
 
 ### `nasdaq_webscraper.py`
-To scrape data from pages 1 to 10, run the following command. The output of this function is a nested dictionary of the form:
-> {'Company_Name': [{'Symbol': 'XXX',
->   'Current_Market_Cap': 'YYY',
->   'Country': 'ZZZ',
->   'IPO_Year': 'AAA',
->   'Subsector': 'BBB'}],.....}
+To scrape data from pages 1 to 10, run the following command. 
+```python
+urls = generate_url('https://www.nasdaq.com/screening/companies-by-industry.aspx',10)
+companies = get_financial_data(urls)
+```
 
-> urls = generate_url('https://www.nasdaq.com/screening/companies-by-industry.aspx',10)
-> companies = get_financial_data(urls)
+The output of the above function is a nested dictionary of the form:
+```python
+{'Company_Name': [{'Symbol': 'XXX',
+'Current_Market_Cap': 'YYY',
+'Country': 'ZZZ',
+'IPO_Year': 'AAA',
+'Subsector': 'BBB'}],.....}
+```
 
